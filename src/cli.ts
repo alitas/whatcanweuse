@@ -4,6 +4,7 @@ import browserslist from 'browserslist';
 import size from 'window-size';
 import pc from 'picocolors';
 import type { Formatter } from 'picocolors/types';
+import groupBy from 'object.groupby';
 import type { FeatureStats, UnsupportedFeatureStats } from './get-feature-list';
 import { getFeatureList } from './get-feature-list';
 
@@ -42,7 +43,7 @@ function printAsTable(
   const columnWidth = Math.floor(windowSize.width / columns);
 
   const rows = Object.values(
-    Object.groupBy(data, (_item, index) => Math.floor(index / columns)),
+    groupBy(data, (_item, index) => Math.floor(index / columns)),
   );
 
   for (const row of rows) {
@@ -98,10 +99,7 @@ function groupBrowsersByAgent(
 ) {
   if (browsers === undefined) return undefined;
 
-  const groupedBrowsers = Object.groupBy(
-    browsers ?? [],
-    ({ browser }) => browser,
-  );
+  const groupedBrowsers = groupBy(browsers ?? [], ({ browser }) => browser);
 
   return Object.entries(groupedBrowsers).map(
     ([browser, versions]) =>
