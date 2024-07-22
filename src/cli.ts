@@ -8,14 +8,17 @@ import groupBy from 'object.groupby';
 import type { FeatureStats, UnsupportedFeatureStats } from './get-feature-list';
 import { getFeatureList } from './get-feature-list';
 
-export const cli = () => {
+export const cli = (args: string[]) => {
   const config = browserslist.findConfig('.');
   if (!config) {
     console.warn('Failed to find browserslist config in the project');
     process.exit(1);
   }
+
+  const [configKey] = args;
+
   const { supported, unsupported, partial, browsers } = getFeatureList(
-    config.defaults,
+    config[configKey ?? 'defaults'],
   );
   const totalCoverage = browserslist.coverage(browsers);
   console.log(
