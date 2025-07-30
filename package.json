@@ -1,7 +1,7 @@
 {
   "name": "whatcanweuse",
   "version": "0.0.4",
-  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
+  "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad",
   "description": "Library & CLI tool to check which features can be used for all browsers in a browserslist configuration",
   "author": "Ali Tas",
   "license": "ISC",
@@ -25,36 +25,36 @@
     "dist"
   ],
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "scripts": {
     "start": "node dist/index.js",
-    "debug": "tsx --watch src/index.ts",
+    "dev": "tsx --watch src/index.ts",
     "build": "tsup",
     "test": "vitest --coverage",
     "lint": "tsc && eslint ."
   },
   "dependencies": {
-    "browserslist": "^4.23.2",
-    "caniuse-lite": "^1.0.30001643",
+    "browserslist": "^4.25.1",
+    "caniuse-lite": "^1.0.30001731",
     "object.groupby": "^1.0.3",
-    "picocolors": "^1.0.1",
+    "picocolors": "^1.1.1",
     "window-size": "^1.1.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.23.2",
+    "@antfu/eslint-config": "^5.0.0",
     "@tsconfig/strictest": "^2.0.5",
     "@types/caniuse-lite": "^1.0.5",
-    "@types/node": "^20.14.11",
+    "@types/node": "^24.1.0",
     "@types/object.groupby": "^1.0.4",
     "@types/window-size": "^1.1.4",
-    "@vitest/coverage-v8": "^2.0.4",
-    "eslint": "^9.7.0",
-    "prettier": "^3.3.3",
-    "tsup": "^8.2.2",
-    "tsx": "^4.16.2",
-    "typescript": "^5.5.3",
-    "vitest": "^2.0.4"
+    "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^9.32.0",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   },
   "pnpm": {
     "peerDependencyRules": {
