@@ -298,7 +298,6 @@ exports[`snapshots next.js browserslist 1`] = `
   "text-decoration-line property",
   "text-decoration-style property",
   "wbr (word break opportunity) element",
-  "width: stretch property",
 ]
 `;
 
@@ -592,6 +591,7 @@ exports[`snapshots next.js browserslist 3`] = `
   "theme-color Meta Tag",
   "ui-serif, ui-sans-serif, ui-monospace and ui-rounded values for font-family",
   "unhandledrejection/rejectionhandled events",
+  "width: stretch property",
   "zstd (Zstandard) content-encoding",
 ]
 `;

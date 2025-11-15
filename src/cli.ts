@@ -1,11 +1,11 @@
-/* eslint-disable no-console */
+ 
+import type { Formatter } from 'picocolors/types';
+import type { FeatureStats, UnsupportedFeatureStats } from './get-feature-list';
 import process from 'node:process';
 import browserslist from 'browserslist';
-import size from 'window-size';
-import pc from 'picocolors';
-import type { Formatter } from 'picocolors/types';
 import groupBy from 'object.groupby';
-import type { FeatureStats, UnsupportedFeatureStats } from './get-feature-list';
+import pc from 'picocolors';
+import size from 'window-size';
 import { getFeatureList } from './get-feature-list';
 
 export const cli = (args: string[]) => {
